@@ -7,7 +7,7 @@ on:
     branches: [main]
     paths: ['directory/**', 'README.md']
   schedule:
-    - cron: '30 9 * * *'      # daily backstop: handles the Monday roll + missed merges
+    - cron: '30 9 * * 1'      # Monday backstop: rolls the ISO week once
   workflow_dispatch:
 concurrency:
   group: weekly-additions
